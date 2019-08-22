@@ -1,0 +1,156 @@
+<html>
+<head>
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+<body style="background-color:#646464">
+<br/><br/>
+<div class="container" style="background-color:#fff">	
+
+  <div class="row">
+  
+      <div class="col-md-12">
+          <h4 class="lead"><strong>Add Revenue Group</strong></h4>
+          <br/>
+          <h6>Revenue Group Title</h6>
+          <br/>
+          <input class="form-control" type="text" placeholder="Fashion-15%">
+          <br/>
+      </div>
+
+  </div>
+
+  <div class="row">
+
+    <div class="col-md-12">
+
+      <span> if <span>
+        <select>
+        <option>ALL</option>
+        <option>SOME</option>
+        <option>EACH</option>
+        </select>
+        <span> above conditions are met</span>
+
+    </div>
+  </div>
+
+<br/>
+<div id="newcont" class="jumbotron">
+  <div class="row" >
+    <div class="col-md-2">
+      <select class="form-control" style="width:120px;">
+          <option>aff_sub</option>
+          <option></option>
+          <option></option>
+      </select>
+         
+    </div>
+    
+
+    <div class="col-md-2">
+      <select class="form-control" style="width:120px;">
+        <option>is</option>
+        <option></option>
+        <option></option>
+      </select>
+
+    </div>
+
+    <div class="col-md-6">
+    
+        <div id="col_container" class="input-group mb-6">
+        <input type="text" class="form-control" placeholder="Insert Parameter" aria-label="Recipient's username" aria-describedby="basic-addon2">
+        <div class="input-group-append">
+          <button id="addrule">add rule</button>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="col-md-1">
+      <span id="addbtn1"><i class="fa fa-minus-circle" style="font-size:24px;color:#646464;"></i></span>
+    </div>
+
+    <div class="col-md-1">
+      <span id="addbtn"><i class="fa fa-plus-circle" style="font-size:24px;color:#646464;"></i></span>
+    </div>
+
+
+  </div>
+</div>
+<br/><br/>
+
+<div class="row">
+<div class="col-sm-2">
+  then revenue is
+</div>  
+<div class="col-sm-6">
+  <div class="input-group-append">
+    <input type="text" placeholder="15">
+    <span class="input-group-text">%</span>
+  </div>
+  </div>
+</div>
+
+<br/><br/>
+
+<div class="row">
+<div class="col-sm-2"></div>  
+<div class="col-sm-2">  
+<button class="btn btn-default" style="background-color:#ff4500;color:#fff;">Confirm</button>
+</div>
+<div class="col-sm-2">
+<button class="btn btn-default" style="background-color:#646464;color:#fff;">Cancel</button>
+</div>
+</div>
+<br/><br/>
+
+
+<script>
+
+$(document).ready(
+
+
+function (){
+
+
+  $('#addbtn').click(function () {
+
+   var contents='<div class="jumbotron"><div class="row"><div class="col-md-2"><select class="form-control" style="width:120px;"><option>aff_sub</option><option></option><option></option></select></div><div class="col-md-2"><select class="form-control" style="width:120px;"><option>is</option><option></option><option></option></select></div><div class="col-md-6"><div id="col_container" class="input-group mb-6"><input type="text" class="form-control" placeholder="Insert Parameter" aria-label="Recipients username" aria-describedby="basic-addon2"><div class="input-group-append"><button id="addrule">add rule</button></div></div></div><div class="col-md-1"><span id="addbtn"><i class="fa fa-minus-circle" style="font-size:24px;color:#646464;"></i></span></div><div class="col-md-1"><span id="addbtn"><i class="fa fa-plus-circle" style="font-size:24px;color:#646464;"></i></span></div></div></div>';
+
+   $('#newcont').after(contents);
+});
+
+  
+
+
+  $('#addrule').click(
+
+   function (){
+
+    var con='<div id="col_container" class="input-group mb-6"><input type="text" class="form-control" placeholder="Insert Parameter" aria-label="Recipients username" aria-describedby="basic-addon2">  <div class="input-group-append"><button id="addrule">remove rule</button></div</div>';
+
+    $('#col_container').before(con);
+
+   });
+
+}
+
+
+
+
+);
+
+
+</script>
+
+
+</body>
+</html>
